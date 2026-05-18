@@ -14,16 +14,25 @@
 
 <!-- HEADER -->
 <header>
-  <a href="index.html" class="logo"><img src="./logoo.png" alt="Logo"></a>
 
-  <nav>
+  <a href="index.html" class="logo">
+    <img src="./logoo.png" alt="Logo">
+  </a>
+
+  <!-- MOBILE MENU BUTTON -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="navbar">
     <a href="index.html">Startseite</a>
     <a href="ueber-uns.html">Über uns</a>
-    <a href="kontakt.html" class="active">Kontakt</a>
-    
+    <a href="kontakt.html"  class="active">Kontakt</a>
   </nav>
-</header>
 
+</header>
 <!-- HERO -->
 <section class="contact-hero">
   <div class="container">
@@ -54,7 +63,7 @@
       <hr>
 
       <p><i class="bi bi-geo-alt-fill"></i> Illinger Straße 25, 70435 Stuttgart , Deutschland</p>
-      <p><i class="bi bi-envelope-fill"></i> info@yec-tech.de</p>
+      <p><i class="bi bi-envelope-fill"></i> info@yec-tech.com</p>
       <p><i class="bi bi-telephone-fill"></i> +49 15568 262476</p>
 
       <h3 style="margin-top:20px;">Öffnungszeiten</h3>
@@ -92,7 +101,7 @@
     </a>
 
     <!-- EMAIL -->
-    <a href="mailto:info@yec-tech.de?subject=Anfrage%20YEC-TECH&body=Hallo%20YEC-TECH,%20ich%20möchte%20eine%20Beratung."
+    <a href="mailto:info@yec-tech.com?subject=Anfrage%20YEC-TECH&body=Hallo%20YEC-TECH,%20ich%20möchte%20eine%20Beratung."
        class="contact-btn email">
 
       <i class="bi bi-envelope-fill"></i>
@@ -134,19 +143,33 @@
 
 </section>
 
-<!-- FOOTER -->
 <footer class="footer-minimal">
+
   <div class="footer-container">
+
     <div class="footer-left">
       © 2026 <strong>YEC-TECH Energy</strong>. Alle Rechte vorbehalten.
     </div>
+
     <div class="footer-right">
-      <a href="datenschutz.html">Datenschutz</a>
-      <span>|</span>
-      <a href="impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+      <span class="separator">|</span>
+      <a href="/impressum.html">Impressum</a>
     </div>
+
   </div>
+
 </footer>
 
 </body>
+
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navbar = document.getElementById("navbar");
+
+  menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
+</script>
 </html>

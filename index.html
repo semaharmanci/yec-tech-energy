@@ -11,15 +11,26 @@
 
 <body>
 
-<header>
-  <a href="index.html" class="logo"><img src="./logoo.png" alt="Logo"></a>
-  <nav>
-    <a href="index.html" class="active">Startseite</a>
-    <a href="ueber-uns.html">Über uns</a>
-    <a href="kontakt.html">Kontakt</a>
-  </nav>
-</header>
+  <header>
 
+    <a href="index.html" class="logo">
+      <img src="./logoo.png" alt="Logo">
+    </a>
+  
+    <!-- MOBILE MENU BUTTON -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <nav id="navbar">
+      <a href="index.html" class="active">Startseite</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  
+  </header>
 <section class="hero">
 
   <!-- VIDEO -->
@@ -281,6 +292,7 @@
 </section>
 
 <footer class="footer-minimal">
+
   <div class="footer-container">
 
     <div class="footer-left">
@@ -294,6 +306,7 @@
     </div>
 
   </div>
+
 </footer>
 
 <!-- COOKIE BANNER -->
@@ -301,7 +314,9 @@
 
   <p>
     Diese Website verwendet Cookies und Google Analytics,
-    um die Nutzung der Website zu analysieren.
+    um die Nutzung der Website zu analysieren.  
+    Mehr Informationen finden Sie in unserer 
+    <a href="datenschutz.html" class="cookie-link">Datenschutzerklärung</a>.
   </p>
 
   <div class="cookie-buttons">
@@ -315,8 +330,6 @@
     </button>
 
   </div>
-
-</div>
 
 </body>
 
@@ -380,7 +393,13 @@
 
         banner.style.display = "none";
     };
-
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+  
+    menuToggle.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+    });
 </script>
 
 </html>
