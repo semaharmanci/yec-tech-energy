@@ -40,8 +40,9 @@ header {
 }
 
 .logo img {
-    height: 200px;
+    height: 100px;
     width: auto;
+    transform: scale(1.5);
 }
 
 nav {
